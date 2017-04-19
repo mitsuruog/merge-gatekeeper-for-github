@@ -4,7 +4,7 @@
     "description": "The name of the application"
   },
   "appDescription": {
-    "message": "マージボタンの近くにマージ先を見せることで、意図しないマージ先のマージしてしまうようなケアレスミスを事前に防ぎます。",
+    "message": "マージボタンの近くにマージ先を見せることで、不注意による意図しないマージ先へのマージを事前に防ぎます。",
     "description": "The description of the application"
   },
   "message": {
