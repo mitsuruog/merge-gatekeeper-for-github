@@ -11,7 +11,7 @@ Chrome Extensions that by showing the merge destination in the close to the merg
 ## Features
 
 - Showing the merge destination in the close to the merge PR button.
-- [WIP]Disable the merge PR button when PR is still WIP.
+- [WIP]Disable the merge PR button when PR title contains WIP.
 
 ## License
 
