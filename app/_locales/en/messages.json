@@ -1,0 +1,14 @@
+{
+  "appName": {
+    "message": "merge gatekeeper for github",
+    "description": "The name of the application"
+  },
+  "appDescription": {
+    "message": "By showing the merge destination in the close to the merge button, avoid careless mistake that merge into the sort of unexpected branch.",
+    "description": "The description of the application"
+  },
+  "message": {
+    "message": "This pull request goes into <span class=\"text-orange\"><strong>$2</strong></span> form <span class=\"text-gray\"><strong>$1</strong></span>.",
+    "description": ""
+  }
+}

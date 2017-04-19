@@ -1,0 +1,14 @@
+{
+  "appName": {
+    "message": "merge gatekeeper for github",
+    "description": "The name of the application"
+  },
+  "appDescription": {
+    "message": "マージボタンの近くにマージ先を見せることで、意図しないマージ先のマージしてしまうようなケアレスミスを事前に防ぎます。",
+    "description": "The description of the application"
+  },
+  "message": {
+    "message": "このpull requestのマージ先は <span class=\"text-gray\"><strong>$1</strong></span> から <span class=\"text-orange\"><strong>$2</strong></span> です。",
+    "description": ""
+  }
+}
