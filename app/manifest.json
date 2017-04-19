@@ -15,7 +15,8 @@
     ]
   },
   "permissions": [
-    "tabs"
+    "tabs",
+    "webNavigation"
   ],
   "content_scripts": [
     {

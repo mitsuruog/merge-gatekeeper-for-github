@@ -18,3 +18,11 @@ function makeDefense() {
 }
 
 hasMergePermission() && makeDefense();
+
+chrome.runtime.onMessage.addListener(
+  function(request, sender, sendResponse) {
+    if (request.event == 'historyChange') {
+      hasMergePermission() && makeDefense();
+    }
+  }
+);
