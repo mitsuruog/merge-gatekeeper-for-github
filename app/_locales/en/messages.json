@@ -8,7 +8,7 @@
     "description": "The description of the application"
   },
   "message": {
-    "message": "This pull request goes into <span class=\"text-orange\"><strong>$2</strong></span> form <span class=\"text-gray\"><strong>$1</strong></span>.",
+    "message": "This pull request goes into <span class=\"text-orange\"><strong>$2</strong></span> from <span class=\"text-gray\"><strong>$1</strong></span>.",
     "description": ""
   }
 }
