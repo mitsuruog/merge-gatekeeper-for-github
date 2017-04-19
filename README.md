@@ -4,6 +4,10 @@ Chrome Extensions that by showing the merge destination in the close to the merg
 
 ![screenshot](https://github.com/mitsuruog/merge-gatekeeper-for-github/raw/master/assets/images/1280-800.png)
 
+## Install
+
+- [Chrome web store](https://chrome.google.com/webstore/detail/merge-gatekeeper-for-gith/meogknoedhhdmkgcmmgdibeeinnhfnlg?hl=ja&gl=JP)
+
 ## Features
 
 - Showing the merge destination in the close to the merge PR button.
