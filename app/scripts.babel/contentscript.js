@@ -4,6 +4,15 @@ function hasMergePermission() {
   return Boolean(document.querySelector('.btn-group-merge'));
 }
 
+function wipProtector() {
+  const $title = document.querySelector('.gh-header-title');
+  const $mergeButton = document.querySelector('.btn-group-merge button');
+
+  if ($title.textContent.match(/wip/i)) {
+    $mergeButton.disabled = true;
+  }
+}
+
 function makeDefense() {
   // checking if message exist
   if (document.querySelector('.merge-gatekeeper-for-github__message')) {
@@ -22,12 +31,18 @@ function makeDefense() {
   $mergeMessage.appendChild($message);
 }
 
-hasMergePermission() && makeDefense();
+if (hasMergePermission()) {
+  makeDefense();
+  wipProtector();
+}
 
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
     if (request.event == 'historyChange') {
-      hasMergePermission() && makeDefense();
+      if (hasMergePermission()) {
+        makeDefense();
+        wipProtector();
+      } 
     }
   }
 );
