@@ -1,18 +1,15 @@
 {
   "name": "__MSG_appName__",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "manifest_version": 2,
   "description": "__MSG_appDescription__",
   "icons": {
-    "16": "images/icon-16.png",
-    "128": "images/icon-128.png"
+    "16": "assets/icons/icon-16.png",
+    "128": "assets/icons/icon-128.png"
   },
   "default_locale": "ja",
   "background": {
-    "scripts": [
-      "scripts/chromereload.js",
-      "scripts/background.js"
-    ]
+    "scripts": []
   },
   "permissions": [
     "activeTab"
@@ -23,7 +20,7 @@
         "https://github.com/*/*/pull*"
       ],
       "js": [
-        "scripts/contentscript.js"
+        "src/content.js"
       ],
       "run_at": "document_end",
       "all_frames": false

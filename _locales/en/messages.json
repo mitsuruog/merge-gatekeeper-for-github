@@ -10,5 +10,11 @@
   "message": {
     "message": "This pull request goes into <span class=\"text-orange\"><strong>$2</strong></span> from <span class=\"text-gray\"><strong>$1</strong></span>.",
     "description": ""
+  },
+  "options": {
+    "message": "Options"
+  },
+  "checkInterval": {
+    "message": "Check Interval (sec)"
   }
 }

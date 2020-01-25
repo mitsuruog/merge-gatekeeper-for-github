@@ -10,5 +10,11 @@
   "message": {
     "message": "このpull requestのマージ先は <span class=\"text-gray\"><strong>$1</strong></span> から <span class=\"text-orange\"><strong>$2</strong></span> です。",
     "description": ""
+  },
+  "options": {
+    "message": "設定"
+  },
+  "checkInterval": {
+    "message": "チェック間隔(秒)"
   }
 }
