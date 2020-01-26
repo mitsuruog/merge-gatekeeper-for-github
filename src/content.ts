@@ -15,7 +15,7 @@ function makeDefense() {
 
   const $mergeMessage = document.querySelector(".merge-message");
 
-  const $message = document.createElement("div");
+  const $message     = document.createElement("div");
   $message.className = "merge-gatekeeper-for-github__message flash flash-warn my-2";
   $message.innerHTML = chrome.i18n.getMessage("message", [$headRef.textContent, $baseRef.textContent]);
 
