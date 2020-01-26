@@ -29,14 +29,7 @@ archive.on("error", function(err) {
 // pipe archive data to the file
 archive.pipe(output);
 
-const FILE_LIST = [
-  "_locales/**/*",
-  "assets/icons/**/*",
-  "src/**/*",
-  "manifest.json",
-];
-
-// append files from a glob pattern
-FILE_LIST.forEach(item => archive.glob(item));
+// append files from a directory
+archive.directory("dist/", false);
 
 archive.finalize();
