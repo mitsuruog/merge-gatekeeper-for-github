@@ -5,15 +5,21 @@ const path = require("path");
 
 module.exports = {
   mode: "development",
+  devtool: "inline-source-map",
+  bail: true,
   entry: {
     content: "./src/content.ts",
+    options: "./src/options.ts",
   },
   module: {
     rules: [
       {
         enforce: "pre",
         test: /\.tsx?$/,
-        use: "eslint-loader",
+        use: {
+          loader: "eslint-loader",
+          options: { fix: true },
+        },
         exclude: /node_modules/,
       },
       {
@@ -35,7 +41,8 @@ module.exports = {
     new CopyPlugin([
       "_locales/**/*",
       "assets/icons/**/*",
-      "manifest.json"
+      "manifest.json",
+      { from: "**/*.html", context: "src" },
     ])
   ],
 };

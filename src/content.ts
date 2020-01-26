@@ -1,4 +1,4 @@
-"use strict";
+import { OptionsService } from "./shared/services";
 
 function hasMergePermission() {
   return Boolean(document.querySelector(".btn-group-merge"));
@@ -15,7 +15,7 @@ function makeDefense() {
 
   const $mergeMessage = document.querySelector(".merge-message");
 
-  const $message     = document.createElement("div");
+  const $message = document.createElement("div");
   $message.className = "merge-gatekeeper-for-github__message flash flash-warn my-2";
   $message.innerHTML = chrome.i18n.getMessage("message", [$headRef.textContent, $baseRef.textContent]);
 
@@ -26,8 +26,12 @@ if (hasMergePermission()) {
   makeDefense();
 }
 
-window.setInterval(() => {
-  if (hasMergePermission()) {
-    makeDefense();
-  }
-}, 3000);
+// TODO: add chrome.storage.onChanged.addListener to update interval automatically.
+OptionsService.restoreOptions(options => {
+  window.setInterval(() => {
+    if (hasMergePermission()) {
+      makeDefense();
+    }
+  }, options.intervalSec * 1000);
+});
+
