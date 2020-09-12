@@ -38,11 +38,16 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new CopyPlugin([
-      "_locales/**/*",
-      "assets/icons/**/*",
-      "manifest.json",
-      { from: "**/*.html", context: "src" },
-    ])
+    new CopyPlugin({
+      patterns: [
+        "_locales/**/*",
+        "assets/icons/**/*",
+        "manifest.json",
+        {
+          from: "**/*.html",
+          context: "src"
+        },
+      ]
+    })
   ],
 };
